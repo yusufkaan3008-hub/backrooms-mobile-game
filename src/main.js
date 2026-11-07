@@ -68,7 +68,7 @@ const clock = new THREE.Clock();
 const previousPlayerPosition = new THREE.Vector3();
 let networkSendAccumulator = 0;
 
-const socketUrl = 'ws://192.168.1.98:3000';
+const socketUrl = 'ws://b5fe9e6dcabc5a4b-31-223-92-198.serveousercontent.com';
 const socket = io(socketUrl, {
   autoConnect: false,
   reconnection: true,
