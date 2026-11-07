@@ -67,8 +67,8 @@ const input = new InputController(controls, camera, renderer.domElement, 4.2, (e
 const clock = new THREE.Clock();
 const previousPlayerPosition = new THREE.Vector3();
 
-const socketUrl = import.meta.env.VITE_SOCKET_URL
-  || (import.meta.env.DEV ? 'http://localhost:3000' : '');
+const socketUrl = window.location.origin.replace('http', 'ws');
+
 const socket = socketUrl ? io(socketUrl, { autoConnect: false, reconnection: true }) : null;
 const initialRoom = new URLSearchParams(window.location.search).get('room') || 'lobby';
 let currentRoomId = initialRoom.slice(0, 32);
