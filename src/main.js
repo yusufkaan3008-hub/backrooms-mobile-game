@@ -70,7 +70,7 @@ let networkSendAccumulator = 0;
 
 // Prefer Vercel's configured tunnel URL. Socket.IO will use HTTPS polling and
 // upgrade to WSS when the tunnel supports it.
-const socketUrl = import.meta.env.VITE_SOCKET_URL?.trim() || 'https://9ae95c2410903153-31-223-92-198.serveousercontent.com';
+const socketUrl = import.meta.env.VITE_SOCKET_URL?.trim() || 'wss://9ae95c2410903153-31-223-92-198.serveousercontent.com';
 const socket = io(socketUrl, {
   autoConnect: false,
   reconnection: true,
