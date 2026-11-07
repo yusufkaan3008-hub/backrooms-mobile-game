@@ -528,3 +528,10 @@ window.addEventListener('beforeunload', () => {
 
 resize();
 animate();
+// 🚨 MAVİ BUTONA TIKLANDIĞINDA MULTIPLAYER BAĞLANTISINI BAŞLATAN KOD
+enterButton.addEventListener('click', () => {
+  if (socket) {
+    roomJoinRequested = true;
+    socket.connect(); // Tünelden içeri zorla bağlan!
+  }
+});
