@@ -67,8 +67,8 @@ renderer.setPixelRatio(Math.min(window.devicePixelRatio, input.isMobile ? 1 : 1.
 const clock = new THREE.Clock();
 const previousPlayerPosition = new THREE.Vector3();
 
-const socketUrl = import.meta.env.VITE_SOCKET_URL
-  || (import.meta.env.DEV ? 'http://localhost:3000' : window.location.origin);
+// 🚨 ESKİ KODU TAMAMEN SİLİP YERİNE BUNU YAPIŞTIR:
+const socketUrl = 'ws://192.168.1.98:3000'; // Senin IPv4 adresin ve portun!
 const socket = io(socketUrl, { autoConnect: false, reconnection: true });
 const initialRoom = new URLSearchParams(window.location.search).get('room') || 'lobby';
 let currentRoomId = initialRoom.slice(0, 32);
