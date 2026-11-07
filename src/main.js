@@ -67,7 +67,7 @@ const input = new InputController(controls, camera, renderer.domElement, 4.2, (e
 const clock = new THREE.Clock();
 const previousPlayerPosition = new THREE.Vector3();
 
-const socketUrl = window.location.origin.replace('http', 'ws');
+const socketUrl = 'wss://b0473a78ccc177bf-31-223-92-198.serveousercontent.com';
 
 const socket = socketUrl ? io(socketUrl, { autoConnect: false, reconnection: true }) : null;
 const initialRoom = new URLSearchParams(window.location.search).get('room') || 'lobby';
